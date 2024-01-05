@@ -17,6 +17,7 @@ public class Persona {
     private String provincia;
     private String codigoPostal;
     private String email;
+    private String password;
     private int whatsapp;
 
     @OneToMany(mappedBy = "cliente")
@@ -27,7 +28,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String name, String lastName, String direccion, String localidad, String provincia, String codigoPostal, String email, int whatsapp) {
+    public Persona(String name, String lastName, String direccion, String localidad, String provincia, String codigoPostal, String email, String password, int whatsapp) {
         this.name = name;
         this.lastName = lastName;
         this.direccion = direccion;
@@ -35,6 +36,7 @@ public class Persona {
         this.provincia = provincia;
         this.codigoPostal = codigoPostal;
         this.email = email;
+        this.password = password;
         this.whatsapp = whatsapp;
     }
 
@@ -105,5 +107,21 @@ public class Persona {
 
     public void setWhatsapp(int whatsapp) {
         this.whatsapp = whatsapp;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Pedidos> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedidos> pedidos) {
+        this.pedidos = pedidos;
     }
 }

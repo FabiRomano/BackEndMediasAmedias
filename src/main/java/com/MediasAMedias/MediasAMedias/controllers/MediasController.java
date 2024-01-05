@@ -49,7 +49,7 @@ public class MediasController {
 
 
     //elimina por id
-    @DeleteMapping("/medias/{id}")
+    @DeleteMapping("/{id}")
     public void deleteMedia(@PathVariable Long id) {
         mediasService.deleteMedia(id);
     }

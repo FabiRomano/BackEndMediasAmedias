@@ -4,6 +4,8 @@ package com.MediasAMedias.MediasAMedias.controllers;
 import com.MediasAMedias.MediasAMedias.models.Persona;
 import com.MediasAMedias.MediasAMedias.services.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,7 +38,7 @@ public class PersonaController {
     //busco persona por id
     @GetMapping("/{id}")
     public Optional<Persona> getPersonaById(@PathVariable Long id) {
-        return personaService.getPrsonaById(id);
+        return personaService.getPersonaById(id);
     }
 
     //edito persona por id
@@ -51,6 +53,7 @@ public class PersonaController {
     public void deletePersona (@PathVariable Long id){
         personaService.deletePersona(id);
     }
+
 
 
 

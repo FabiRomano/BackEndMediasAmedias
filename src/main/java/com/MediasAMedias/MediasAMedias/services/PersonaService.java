@@ -22,7 +22,7 @@ public class PersonaService {
     }
 
     //trae persona por id
-    public Optional<Persona> getPrsonaById(Long id){
+    public Optional<Persona> getPersonaById(Long id){
         return personaRepository.findById(id);
     }
 
